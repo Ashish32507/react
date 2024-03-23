@@ -1,0 +1,6 @@
+.bg{
+background-image: radial-gradient(#0088ff 2.5px, transparent 2.5px), radial-gradient(#00b3ffa4 2.5px, transparent 2.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  background-color: #b1d2ff;
+}
