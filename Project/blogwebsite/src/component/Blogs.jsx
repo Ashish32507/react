@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import Spinner from "./Spinner";
+import BlogDetails from "./BlogDetails";
 
 function Blogs() {
   // consume
@@ -16,29 +17,30 @@ function Blogs() {
           <div>No Post Found</div>
         ) : (
           posts.map((post) => (
-            <div key={post.id}>
-              <p className="font-bold text-lg">{post.title}</p>
-              <p className="text-[15px]">
-                {" "}
-                By <span className="italic">{post.author}</span> on{" "}
-                <span className="underline font-bold text-sm">
-                  {" "}
-                  {post.category}{" "}
-                </span>
-              </p>
-              <p className="text-sm"> Posted On {post.date} </p>
-              <p className="text-md mt-[10px]">{post.content}</p>
-              <div className="">
-                {post.tags.map((tag, index) => {
-                  return (
-                    <span
-                      key={index}
-                      className="text-blue-500 underline text-xs font-semibold mx-1"
-                    >{`#${tag}`}</span>
-                  );
-                })}
-              </div>
-            </div>
+            <BlogDetails key={post.id} post={post} />
+            // <div key={post.id}>
+            //   <p className="font-bold text-lg">{post.title}</p>
+            //   <p className="text-[15px]">
+            //     {" "}
+            //     By <span className="italic">{post.author}</span> on{" "}
+            //     <span className="underline font-bold text-sm">
+            //       {" "}
+            //       {post.category}{" "}
+            //     </span>
+            //   </p>
+            //   <p className="text-sm"> Posted On {post.date} </p>
+            //   <p className="text-md mt-[10px]">{post.content}</p>
+            //   <div className="">
+            //     {post.tags.map((tag, index) => {
+            //       return (
+            //         <span
+            //           key={index}
+            //           className="text-blue-500 underline text-xs font-semibold mx-1"
+            //         >{`#${tag}`}</span>
+            //       );
+            //     })}
+            //   </div>
+            // </div>
           ))
         )}
       </div>
