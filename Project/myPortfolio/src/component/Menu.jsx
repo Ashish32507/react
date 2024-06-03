@@ -11,7 +11,7 @@ function Menu() {
     <>
       <div className="bg-[#F2F5F9] px-10">
         <div className="w-full h-24 flex justify-end items-center">
-          <div className="w-[530px] h-24 bg-white flex items-center justify-around flex-wrap rounded-sm shadow-sm px-2">
+          <div className="w-[400px] h-24 bg-white flex items-center justify-around flex-wrap rounded-sm shadow-sm px-2">
             <NavLink
               to="/home"
               className="flex flex-col items-center justify-center bg-[#CED4DA] p-3 rounded-sm"
@@ -32,13 +32,6 @@ function Menu() {
             >
               <MdWorkOutline className="text-2xl text-[#7D7C78]" />
               <p className="text-sm">Project</p>
-            </NavLink>
-            <NavLink
-              to="/certificate"
-              className="flex flex-col items-center justify-center bg-[#CED4DA] p-3 rounded-sm"
-            >
-              <TbFileCertificate className="text-2xl text-[#7D7C78]" />
-              <p className="text-sm">Certificate</p>
             </NavLink>
             <NavLink
               to="/contact"
