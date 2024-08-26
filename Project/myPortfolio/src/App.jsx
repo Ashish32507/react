@@ -1,26 +1,24 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-// import "./App.css";
-import Menu from "./component/Menu";
+import { Outlet } from "react-router-dom";
 import Navbar from "./component/Navbar";
 import Sidebar from "./component/Sidebar";
-import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <div className="w-full bg-[#F2F5F9] pb-10">
-        <Navbar />
-        <Menu />
-        <div className="w-full h-full flex flex-wrap justify-between px-10">
+    <div className="flex flex-col min-h-screen bg-[#F2F5F9]">
+      <Navbar />
+      <div className="flex flex-col lg:flex-row flex-1 my-5 px-10 gap-5">
+        {/* Sidebar */}
+        <aside className="w-full lg:w-1/4 lg:block rounded-lg">
           <Sidebar />
-          <div className="w-[800px] border h-[800px] bg-white rounded-md scroll-smooth">
+        </aside>
+        {/* Main Content */}
+        <main className="flex-1 lg:p-0 rounded-lg mt-4 lg:mt-0 border">
+          <div className="max-w-screen-lg mx-auto w-full">
             <Outlet />
           </div>
-        </div>
+        </main>
       </div>
-    </>
+    </div>
   );
 }
 

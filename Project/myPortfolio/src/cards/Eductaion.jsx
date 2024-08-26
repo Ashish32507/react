@@ -1,17 +1,16 @@
 import React from "react";
 
-function Eductaion(props) {
-  const { service, index } = props; // Destructure service and index from props
-  const oddBackgroundColor =
-    service.id % 2 === 0 ? "bg-blue-200" : "bg-green-200"; // Define odd background color
-
+function Eductaion({ service }) {
   return (
-    <div
-      className={`border w-[300px] px-2 py-2 rounded-lg ${oddBackgroundColor}`}
-    >
-      <p>{service.date}</p>
-      <h2 className="text-2xl font-bold">{service.title}</h2>
-      <p className="text-justify my-2">{service.school}</p>
+    <div className="bg-white shadow-lg rounded-lg border border-gray-200 p-6 flex flex-col transition-transform transform hover:scale-105 hover:shadow-xl hover:border-orange-600">
+      <h3 className="text-xl font-semibold  mb-2 relative px-4 py-2 text-white bg-[#FF9C1A] rounded-md shadow-sm">
+        {service.title}
+        <span className="absolute inset-0 rounded-md pointer-events-none"></span>
+      </h3>
+      <p className="text-base font-medium text-gray-700 mb-2">
+        {service.school}
+      </p>
+      <p className="text-sm text-gray-500 italic">{service.date}</p>
     </div>
   );
 }
