@@ -91,7 +91,7 @@ function Resume() {
           <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
             Work Skills
           </h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {workSkill.map((skill, index) => (
               <div
                 key={index}
@@ -107,7 +107,7 @@ function Resume() {
           <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
             Soft Skills
           </h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {softSkill.map((skill, index) => (
               <div
                 key={index}
